@@ -26,10 +26,17 @@ const Heroes: NextPage = () => {
         // axios.get('/api/gdapi')
         //     .then(res => console.log(res))
     }
+    function handleClick2():void {
+        axios.post('/api/gdapi')
+            .then(res => console.log(res))
+        // axios.get('/api/gdapi')
+        //     .then(res => console.log(res))
+    }
 
 return(
 <Layout title='Heroes'>
     <button onClick={handleClick}>test</button>
+    <button onClick={handleClick2}>test2</button>
 <div className={styles.grid}>
     {ArrSplitter(4, [...Array(33)]).map((e, i) => (
         <div className={styles.cell} key={i}>
