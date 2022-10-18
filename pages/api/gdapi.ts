@@ -34,12 +34,12 @@ export default async function HandlerGD(
     }
 
     function POST():void {
-      let { name } = body
-      if(!name) {
-        return res.status(400).send('Bad Request')
-      }
+      // let { name } = body
+      // if(!name) {
+      //   return res.status(400).send('Bad Request')
+      // }
       const data = getData()
-      data.characters.push(new CharData(name))
+      data.characters.push(new CharData('name'))
       if(saveData(data)) {
         res.status(200).send('success')
       } else {
